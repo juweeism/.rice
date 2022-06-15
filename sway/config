@@ -23,8 +23,8 @@ output * bg ~/wallpapers/asahi.jpg fill
 ### Idle configuration
 
  exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          timeout 3000 'swaylock -f -c 000000' \
+          timeout 6000 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
 
