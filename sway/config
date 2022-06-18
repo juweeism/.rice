@@ -11,8 +11,9 @@ set $menu "wofi --show=drun"
 set $browser firefox
 
 ### Window colors
-client.focused #FFFFFF #FFFFFF #000000 #000000 #FFFFFF
-
+# client.focused #FFFFFF #FFFFFF #000000 #000000 #FFFFFF
+for_window [title="^.*"] title_format ""
+default_border none
 
 ### Output configuration
 output * bg ~/wallpapers/asahi.jpg fill
