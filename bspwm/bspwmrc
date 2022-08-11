@@ -3,17 +3,20 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom --config $HOME/.config/picom/picom.conf &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
+bspc monitor DP1 -d   
 
-bspc config border_width        1 
-bspc config window_gap	 	0 
+
+bspc config border_width   1 
+bspc config window_gap	 	12 
 bspc config top_padding		0
 
-bspc config split_ratio          0.52
+bspc config single_monocle true
+bspc config split_ratio          0.69
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focused_border_color  "#1a1a1a"
-bspc config normal_border_color  "#1a1a1a"
+bspc config normal_border_color  "#101010"
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
@@ -30,4 +33,5 @@ xsetroot -cursor_name left_ptr
 
 feh --bg-fill --randomize ~/wallpapers/*
 killall -q polybar 
-exec polybar
+polybar laptop & 
+polybar vga
