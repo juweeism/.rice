@@ -22,7 +22,7 @@ super + n
 	kitty -e --class kitten
 
 super + v
-	kitty -e nvim 
+	kitty -e --class neovim nvim 
 
 
 #---------------------------------------#
